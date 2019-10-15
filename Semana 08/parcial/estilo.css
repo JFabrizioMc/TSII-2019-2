@@ -1,0 +1,35 @@
+body {
+    font-family: arial;
+}
+.tablita {
+    border: 1px solid #666;
+    border-collapse: collapse;
+}
+.tablita th {
+    padding: 8px;
+    background-color: #666;
+    color: #fff;
+}
+.tablita td {
+    padding: 8px;
+}
+.centrado {
+    text-align: center;
+}
+nav {
+    background-color: orange;
+    padding: 10px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+nav ul li a {
+    display: block;
+    padding: 6px;
+    margin: 0 10px;
+    text-decoration: none;
+}
