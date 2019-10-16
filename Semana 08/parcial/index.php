@@ -24,7 +24,7 @@ $query = "SELECT * FROM eventos";
             <th>Correo</th>
             <th>Cargo</th>
             <th>¿Suscrito?</th>
-            <th>Operaciones</th>
+            <th colspan="2">Operaciones</th>
         </tr>
 
         <?php foreach ($pdo->query($query) as $inscrito) { ?>
@@ -35,6 +35,7 @@ $query = "SELECT * FROM eventos";
             <td><?php echo $inscrito["cargo"] ?></td>
             <td class="centrado"><?php if ($inscrito["suscrito"] == 1) { echo "😀"; } else { echo "✖️"; } ?></td>
             <td><a href="borrar.php?codigo=<?php echo $inscrito["codigo"] ?>">Eliminar</a></td>
+            <td><a href="editar.php?codigo=<?php echo $inscrito["codigo"] ?>">Modificar</a></td>
         </tr>        
         <?php } ?>
 
