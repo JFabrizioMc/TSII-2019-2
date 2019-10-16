@@ -33,15 +33,16 @@ $inscrito = $pdo->query($query)->fetch();
         <div>
             Cargo: 
             <select name="p_cargo">
-                <option value="Gerente General">Gerente General</option>
-                <option value="Administrativo">Administrativo</option>
-                <option value="Alumno">Alumno</option>
+                <option value="Gerente General" <?php if ($inscrito["cargo"] == "Gerente General") { echo "selected"; } ?> >Gerente General</option>
+                <option value="Administrativo" <?php if ($inscrito["cargo"] == "Administrativo") { echo "selected"; } ?> >Administrativo</option>
+                <option value="Alumno" <?php if ($inscrito["cargo"] == "Alumno") { echo "selected"; } ?> >Alumno</option>
+                <option value="Profesor" <?php if ($inscrito["cargo"] == "Profesor") { echo "selected"; } ?> >Profesor</option>
             </select>
         </div>
 
         <div>
             ¿Desea suscribirse? 
-            <input type="checkbox" name="p_sus" value="si" />
+            <input type="checkbox" name="p_sus" value="si" <?php if ($inscrito["suscrito"] == "1") { echo "checked"; } ?>  />
         </div>
 
         <button>Actualizar</button>

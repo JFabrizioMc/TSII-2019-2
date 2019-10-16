@@ -1,0 +1,7 @@
+<?php
+# Entrada
+
+# Proceso
+
+# Salida
+?>
