@@ -1,0 +1,71 @@
+﻿-- phpMyAdmin SQL Dump
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-10-2019 a las 17:42:50
+-- Versión del servidor: 10.1.25-MariaDB
+-- Versión de PHP: 7.1.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `limapass`
+--
+CREATE DATABASE IF NOT EXISTS `limapass` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `limapass`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `codigo` int(11) NOT NULL,
+  `nickname` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `dni` char(8) NOT NULL,
+  `fecha_registro` datetime NOT NULL,
+  `fecha_ultimo_acceso` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`codigo`, `nickname`, `password`, `dni`, `fecha_registro`, `fecha_ultimo_acceso`) VALUES
+(1, 'jona', '$2y$10$iRPq2bM06XxACuS3/XmcKe2k7sBt8fxUSLDofT2UH325wvdggMkJy', '44441112', '2019-10-22 09:58:09', '2019-10-22 10:37:54');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
